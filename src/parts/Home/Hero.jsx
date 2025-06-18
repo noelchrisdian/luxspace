@@ -9,10 +9,8 @@ const Hero = () => {
 					You've Dreaming
 				</h1>
 				<h2 className="px-8 text-base md:px-0 md:text-lg my-6 tracking-wide">
-					We provide premium furnitures that brings 
-					<br className="hidden lg:block" />
-					a cozy, homey vibe to
-					any space
+					We provide premium furnitures that brings
+					<br className="hidden lg:block" />a cozy, homey vibe to any space
 				</h2>
 				<div>
 					<Link
@@ -24,8 +22,8 @@ const Hero = () => {
 			</div>
 			<div className="w-full inset-0 md:relative md:w-1/2">
 				<div className="relative hero-image">
-					<div className="absolute inset-0 bg-black opacity-[0.35] z-10" />
-					<div className="absolute right-0 bottom-0 md:inset-0">
+					<div className="overlay inset-0 bg-black opacity-35 z-10" />
+					<div className="overlay right-0 bottom-0 md:inset-0">
 						<button
 							className="video hero-cta focus:outline-none z-30 modal-trigger"
 							data-content='<div className="w-screen pb-56 md:w-88 md:pb-56 relative z-50">
