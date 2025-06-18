@@ -1,7 +1,16 @@
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { Homepage } from "./pages/Homepage";
+
 const App = () => {
-  return (
-    <h1 className="text-3xl font-mono text-center my-2">Hello World</h1>
-  )
+	return (
+		<div className="App">
+			<Router>
+				<Routes>
+					<Route path="/" element={<Homepage />} />
+				</Routes>
+			</Router>
+		</div>
+	)
 }
 
 export { App };
