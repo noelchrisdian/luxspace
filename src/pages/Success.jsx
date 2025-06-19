@@ -23,10 +23,10 @@ const Success = () => {
 								alt="congrats illustration"
 							/>
 							<h2 className="text-3xl font-semibold mb-6">
-								Ah yes it’s success!
+								Ah yes it's success!
 							</h2>
 							<p className="text-lg mb-12">
-								The furniture you purchased will be shipped right now so please sit tight and be ready for it
+								The furniture you purchased will be shipped <br /> right now so please sit tight and be ready for it
 							</p>
 							<Link
 								to="/"

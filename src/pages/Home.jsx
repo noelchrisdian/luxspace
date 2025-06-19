@@ -6,7 +6,7 @@ import { Hero } from "../parts/Home/Hero";
 import { JustArrived } from "../parts/Home/JustArrived";
 import { Sitemap } from "../parts/Sitemap";
 
-const Homepage = () => {
+const Home = () => {
 	return (
 		<>
 			<Header theme='white' position='absolute' />
@@ -20,4 +20,4 @@ const Homepage = () => {
 	)
 }
 
-export { Homepage };
+export { Home };
