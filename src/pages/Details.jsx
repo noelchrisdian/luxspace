@@ -1,15 +1,14 @@
 import { Breadcrumbs } from "../parts/Breadcrumbs";
-// import { BrowseRoom } from "../parts/Home/BrowseRoom";
-import { Clients } from "../parts/Home/Clients";
 import { Footer } from "../parts/Footer";
 import { Header } from "../parts/Header";
-// import { JustArrived } from "../parts/Home/JustArrived";
+import { ProductDetails } from "../parts/Details/ProductDetails";
 import { Sitemap } from "../parts/Sitemap";
+import { Suggestions } from "../parts/Details/Suggestions";
 
 const Details = () => {
 	return (
 		<>
-			<Header />
+			<Header theme='black' />
 			<Breadcrumbs
 				list={[
 					{ url: "/", name: "Home" },
@@ -17,11 +16,12 @@ const Details = () => {
 					{ url: "/categories/001/products/001", name: "Details" },
 				]}
 			/>
-			<Clients />
+			<ProductDetails />
+			<Suggestions />
 			<Sitemap />
 			<Footer />
 		</>
-	);
-};
+	)
+}
 
 export { Details };
