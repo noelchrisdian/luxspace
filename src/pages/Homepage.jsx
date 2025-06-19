@@ -17,7 +17,7 @@ const Homepage = () => {
 			<Sitemap />
 			<Footer />
 		</>
-	);
-};
+	)
+}
 
 export { Homepage };

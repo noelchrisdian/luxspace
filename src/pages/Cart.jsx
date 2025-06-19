@@ -12,7 +12,7 @@ const Cart = () => {
 			<Breadcrumbs
 				list={[
 					{ url: "/", name: "Home" },
-					{ url: "/cart", name: "Shopping Cart" },
+					{ url: "/cart", name: "Shopping Cart" }
 				]}
             />
             

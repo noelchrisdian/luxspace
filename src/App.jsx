@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
-import { Homepage } from "./pages/Homepage";
-import { Details } from "./pages/Details";
 import { Cart } from "./pages/Cart";
+import { Details } from "./pages/Details";
+import { Homepage } from "./pages/Homepage";
+import { Success } from "./pages/Success";
 import './app.css';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
 					<Route path="/" element={<Homepage />} />
 					<Route path="/categories/:idc" element={<Details />} />
 					<Route path="/cart" element={<Cart />} />
+					<Route path="/success" element={<Success />} />
 				</Routes>
 			</Router>
 		</div>

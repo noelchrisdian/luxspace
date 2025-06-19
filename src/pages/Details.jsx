@@ -13,7 +13,7 @@ const Details = () => {
 				list={[
 					{ url: "/", name: "Home" },
 					{ url: "/categories/001", name: "Office Room" },
-					{ url: "/categories/001/products/001", name: "Details" },
+					{ url: "/categories/001/products/001", name: "Details" }
 				]}
 			/>
 			<ProductDetails />
