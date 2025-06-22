@@ -3,9 +3,9 @@ import { Cart } from "./pages/Cart";
 import { Details } from "./pages/Details";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
+import { Provider } from "./helpers/hooks/useGlobalContext";
 import { Success } from "./pages/Success";
 import "./app.css";
-import { Provider } from "./helpers/hooks/useGlobalContext";
 
 const App = () => {
 	return (

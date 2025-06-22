@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../helpers/hooks/useGlobalContext";
 import { useLayoutEffect, useRef, useState } from "react";
-import { ReactComponent as IconCart } from '../assets/icons/icon-cart.svg';
+import IconCart from "../assets/icons/icon-cart.svg?react";
 import PropTypes from "prop-types";
 
 const Header = ({ theme, position }) => {
 	// const [toggleMain, setToggleMain] = useState(false);
 	const [isCartChanged, setCartChanged] = useState(false);
-	const { state } = useGlobalContext;
+	const { state } = useGlobalContext();
 
 	const previousCart = useRef(state?.cart || {});
 
