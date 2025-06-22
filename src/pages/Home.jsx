@@ -7,10 +7,12 @@ import { JustArrived } from "../parts/Home/JustArrived";
 import { Sitemap } from "../parts/Sitemap";
 import { useModal } from "../helpers/hooks/useModal";
 import { useScrollAnchor } from "../helpers/hooks/useScrollAnchor";
+import { useScrollTop } from "../helpers/hooks/useScrollTop";
 
 const Home = () => {
 	useModal();
 	useScrollAnchor();
+	useScrollTop();
 
 	return (
 		<>

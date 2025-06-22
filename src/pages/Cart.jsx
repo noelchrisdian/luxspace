@@ -4,8 +4,11 @@ import { Header } from "../parts/Header";
 import { ShippingDetails } from "../parts/Cart/ShippingDetails";
 import { ShoppingCart } from "../parts/Cart/ShoppingCart";
 import { Sitemap } from "../parts/Sitemap";
+import { useScrollTop } from "../helpers/hooks/useScrollTop";
 
 const Cart = () => {
+	useScrollTop();
+
 	return (
 		<>
 			<Header theme="black" />

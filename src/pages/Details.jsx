@@ -8,6 +8,7 @@ import { useAsync } from "../helpers/hooks/useAsync";
 import { useEffect } from "react";
 import { fetchData } from "../helpers/fetch";
 import { useParams } from "react-router-dom";
+import { useScrollTop } from "../helpers/hooks/useScrollTop";
 
 const LoaderProduct = () => {
 	return (
@@ -98,6 +99,8 @@ const LoaderSuggestion = () => {
 }
 
 const Details = () => {
+	useScrollTop();
+
 	const { idp } = useParams();
 	const { data, isLoading, run } = useAsync();
 	useEffect(() => {

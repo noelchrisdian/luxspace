@@ -3,8 +3,11 @@ import { Header } from "../parts/Header";
 import { Link } from "react-router-dom";
 import { Sitemap } from "../parts/Sitemap";
 import { Footer } from "../parts/Footer";
+import { useScrollTop } from "../helpers/hooks/useScrollTop";
 
 const Success = () => {
+	useScrollTop();
+
 	return (
 		<>
 			<Header />
