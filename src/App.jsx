@@ -4,21 +4,26 @@ import { Details } from "./pages/Details";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { Success } from "./pages/Success";
-import './app.css';
+import "./app.css";
+import { Provider } from "./helpers/hooks/useGlobalContext";
 
 const App = () => {
 	return (
-		<div className="App">
+		<Provider>
 			<Router>
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/categories/:idc" element={<Details />} />
+					<Route
+						path="/categories/:idc/products/:idp"
+						element={<Details />}
+					/>
 					<Route path="/cart" element={<Cart />} />
 					<Route path="/success" element={<Success />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</Router>
-		</div>
+		</Provider>
 	)
 }
 
