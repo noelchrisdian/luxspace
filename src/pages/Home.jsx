@@ -1,21 +1,15 @@
 import { BrowseRoom } from "../parts/Home/BrowseRoom";
 import { Clients } from "../parts/Home/Clients";
+import { Document } from "../parts/Document";
 import { Footer } from "../parts/Footer";
 import { Header } from "../parts/Header";
 import { Hero } from "../parts/Home/Hero";
 import { JustArrived } from "../parts/Home/JustArrived";
 import { Sitemap } from "../parts/Sitemap";
-import { useModal } from "../helpers/hooks/useModal";
-import { useScrollAnchor } from "../helpers/hooks/useScrollAnchor";
-import { useScrollTop } from "../helpers/hooks/useScrollTop";
 
 const Home = () => {
-	useModal();
-	useScrollAnchor();
-	useScrollTop();
-
 	return (
-		<>
+		<Document>
 			<Header theme='white' position='absolute' />
 			<Hero />
 			<BrowseRoom />
@@ -23,7 +17,7 @@ const Home = () => {
 			<Clients />
 			<Sitemap />
 			<Footer />
-		</>
+		</Document>
 	)
 }
 

@@ -1,16 +1,14 @@
 import { Breadcrumbs } from "../parts/Breadcrumbs";
+import { Document } from "../parts/Document";
 import { Footer } from "../parts/Footer";
 import { Header } from "../parts/Header";
 import { ShippingDetails } from "../parts/Cart/ShippingDetails";
 import { ShoppingCart } from "../parts/Cart/ShoppingCart";
 import { Sitemap } from "../parts/Sitemap";
-import { useScrollTop } from "../helpers/hooks/useScrollTop";
 
 const Cart = () => {
-	useScrollTop();
-
 	return (
-		<>
+		<Document>
 			<Header theme="black" />
 			<Breadcrumbs
 				list={[
@@ -29,7 +27,7 @@ const Cart = () => {
             </section>
             <Sitemap />
 			<Footer />
-		</>
+		</Document>
 	)
 }
 

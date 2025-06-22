@@ -17,9 +17,9 @@ const Header = ({ theme, position }) => {
 			setCartChanged(true);
 			setTimeout(() => {
 				setCartChanged(false);
-			}, 550);
+			}, 550)
 		}
-	}, [state.cart]);
+	}, [state.cart])
 
 	return (
 		<header className={[position, "w-full z-50 px-4"].join(" ")}>
@@ -140,12 +140,12 @@ const Header = ({ theme, position }) => {
 				</div>
 			</div>
 		</header>
-	);
+	)
 }
 
-export { Header }
+export { Header };
 
 Header.propTypes = {
 	theme: PropTypes.string.isRequired,
-	position: PropTypes.string,
+	position: PropTypes.string
 }

@@ -1,4 +1,5 @@
 import { Breadcrumbs } from "../parts/Breadcrumbs";
+import { Document } from "../parts/Document";
 import { Footer } from "../parts/Footer";
 import { Header } from "../parts/Header";
 import { ProductDetails } from "../parts/Details/ProductDetails";
@@ -8,7 +9,6 @@ import { useAsync } from "../helpers/hooks/useAsync";
 import { useEffect } from "react";
 import { fetchData } from "../helpers/fetch";
 import { useParams } from "react-router-dom";
-import { useScrollTop } from "../helpers/hooks/useScrollTop";
 
 const LoaderProduct = () => {
 	return (
@@ -33,7 +33,7 @@ const LoaderProduct = () => {
 												style={{ width: "106px", height: "106px" }}
 											/>
 										</div>
-									);
+									)
 								})}
 						</div>
 						<div className="preview">
@@ -73,25 +73,27 @@ const LoaderSuggestion = () => {
 					</h3>
 				</div>
 				<div className="flex overflow-x-auto mb-4 -mx-3">
-					{Array(4).fill().map((_, index) => {
-						return (
-							<div
-								className="px-3 flex-none"
-								style={{ width: "320px" }}
-								key={index}>
-								<div className="rounded-xl p-4 pb-8 relative bg-white">
-									<div className="rounded-xl overflow-hidden card-shadow w-full h-36">
-										<div
-											className=" bg-gray-300 animate-pulse rounded-lg h-full overflow-hidden"
-											style={{ width: 287, height: 150 }}
-										/>
+					{Array(4)
+						.fill()
+						.map((_, index) => {
+							return (
+								<div
+									className="px-3 flex-none"
+									style={{ width: "320px" }}
+									key={index}>
+									<div className="rounded-xl p-4 pb-8 relative bg-white">
+										<div className="rounded-xl overflow-hidden card-shadow w-full h-36">
+											<div
+												className=" bg-gray-300 animate-pulse rounded-lg h-full overflow-hidden"
+												style={{ width: 287, height: 150 }}
+											/>
+										</div>
+										<div className="w-56 h-4 mt-6 bg-gray-300 animate-pulse rounded-full" />
+										<div className="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full" />
 									</div>
-									<div className="w-56 h-4 mt-6 bg-gray-300 animate-pulse rounded-full" />
-									<div className="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full" />
 								</div>
-							</div>
-						);
-					})}
+							)
+						})}
 				</div>
 			</div>
 		</section>
@@ -99,34 +101,38 @@ const LoaderSuggestion = () => {
 }
 
 const Details = () => {
-	useScrollTop();
-
 	const { idp } = useParams();
-	const { data, isLoading, run } = useAsync();
+	const { data, isError, isLoading, run } = useAsync();
 	useEffect(() => {
 		run(fetchData(`/api/products/${idp}`));
-	}, [idp, run]);
+	}, [idp, run])
 
 	return (
-		<>
+		<Document>
 			<Header theme="black" />
 			<Breadcrumbs
 				list={[
 					{ url: "/", name: "Home" },
 					{ url: "/categories/001", name: "Office Room" },
-					{ url: "/categories/001/products/001", name: "Details" },
+					{ url: "/categories/001/products/001", name: "Details" }
 				]}
 			/>
 
-			{isLoading ? <LoaderProduct /> : <ProductDetails data={data} />}
-			{isLoading ? (
-				<LoaderSuggestion />
+			{isError ? (
+				<Error body={"Product is not found"} />
 			) : (
-				<Suggestions data={data?.relatedProducts || {}} />
+				<>
+					{isLoading ? <LoaderProduct /> : <ProductDetails data={data} />}
+					{isLoading ? (
+						<LoaderSuggestion />
+					) : (
+						<Suggestions data={data?.relatedProducts || {}} />
+					)}
+				</>
 			)}
 			<Sitemap />
 			<Footer />
-		</>
+		</Document>
 	)
 }
 
