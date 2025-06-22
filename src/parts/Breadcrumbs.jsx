@@ -23,7 +23,7 @@ const Breadcrumbs = ({ list }) => {
 				</ul>
 			</div>
 		</section>
-	);
+	)
 }
 
 export { Breadcrumbs };

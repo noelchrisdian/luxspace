@@ -151,7 +151,7 @@ const ShippingDetails = () => {
 													/>
 												</button>
 											</div>
-										);
+										)
 								  })}
 						</div>
 					</div>
@@ -171,7 +171,7 @@ const ShippingDetails = () => {
 													key={index}>
 													<div className="bg-gray-300 w-full h-full animate-pulse rounded-lg mx-2" />
 												</div>
-											);
+											)
 										})
 								: data?.payments?.map((item) => {
 										return (
@@ -194,7 +194,7 @@ const ShippingDetails = () => {
 													/>
 												</button>
 											</div>
-										);
+										)
 								  })}
 						</div>
 					</div>

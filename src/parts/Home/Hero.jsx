@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 const Hero = () => {
 	return (
 		<section className="flex items-center hero">
@@ -47,7 +45,7 @@ const Hero = () => {
 				</div>
 			</div>
 		</section>
-	);
+	)
 }
 
 export { Hero };

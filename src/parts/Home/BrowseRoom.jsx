@@ -125,7 +125,7 @@ const BrowseRoom = () => {
 										</span>
 									</div>
 								</div>
-							);
+							)
 						})
 					)}
 				</div>
