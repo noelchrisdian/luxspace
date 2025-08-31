@@ -80,7 +80,7 @@ const JustArrived = () => {
 										IDR {item.price.toLocaleString("id-ID")}
 									</span>
 									<Link
-										to={`/categories/${item.idc}`}
+										to={`/categories/${item.idc}/products/${item.id}`}
 										className="stretched-link"
 									/>
 								</div>

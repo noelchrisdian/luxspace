@@ -145,7 +145,7 @@ const ShippingDetails = () => {
 													}
 													className="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none">
 													<img
-														src={item.imageUrl}
+														src={item.imgUrl}
 														alt={item.name}
 														className="object-contain max-h-full"
 													/>
@@ -188,7 +188,7 @@ const ShippingDetails = () => {
 													}
 													className="border border-gray-200 focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full focus:outline-none">
 													<img
-														src={item.imageUrl}
+														src={item.imgUrl}
 														alt={item.name}
 														className="object-contain max-h-full"
 													/>

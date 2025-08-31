@@ -1,5 +1,6 @@
 import { Breadcrumbs } from "../parts/Breadcrumbs";
 import { Document } from "../parts/Document";
+import { Error } from "../parts/Error";
 import { Footer } from "../parts/Footer";
 import { Header } from "../parts/Header";
 import { ProductDetails } from "../parts/Details/ProductDetails";
@@ -104,7 +105,7 @@ const Details = () => {
 	const { idp } = useParams();
 	const { data, isError, isLoading, run } = useAsync();
 	useEffect(() => {
-		run(fetchData(`/api/products/${idp}`));
+		run(fetchData({url: `/api/products/${idp}`}));
 	}, [idp, run])
 
 	return (
